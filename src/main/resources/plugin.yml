@@ -1,0 +1,10 @@
+name: EnumLibs
+version: '${version}'
+main: it.enumproject.plugin.EnumLibs
+author: Axiid
+commands:
+  enumlibs:
+    description: Main command
+    aliases:
+      - elibs
+      - elib
