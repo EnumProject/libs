@@ -7,6 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.function.Consumer;
@@ -34,6 +35,11 @@ public class InventoryBuilder implements Supplier<Inventory>, Listener {
 
     public InventoryBuilder title(String title) {
         this.title = ChatUtils.color(title);
+        return this;
+    }
+
+    public InventoryBuilder addItem(int slotId, ItemStack itemStack) {
+        inventory.setItem(slotId, itemStack);
         return this;
     }
 
