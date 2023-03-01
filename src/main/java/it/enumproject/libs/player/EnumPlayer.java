@@ -2,8 +2,8 @@ package it.enumproject.libs.player;
 
 import org.bukkit.entity.Player;
 
-public abstract class EnumPlayer implements Player {
+public interface EnumPlayer extends Player {
 
-    // TODO: Da fare la classe EnumPlayer.
+    // TODO: Enum player with custom methods
 
 }
