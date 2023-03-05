@@ -1,23 +1,22 @@
 package it.enumproject.libs;
 
-import it.enumproject.provider.LibsProvider;
+import java.util.Random;
 
 public class EnumLibs {
 
-    private final LibsProvider provider;
     private final String version;
+    private static final Random random = new Random();
 
-    public EnumLibs(LibsProvider provider, String version) {
-        this.provider = provider;
+    public EnumLibs(String version) {
         this.version = version;
-    }
-
-    public LibsProvider getProvider() {
-        return provider;
     }
 
     public String getVersion() {
         return version;
+    }
+
+    public static int chance() {
+        return random.nextInt(100) + 10;
     }
 
 }

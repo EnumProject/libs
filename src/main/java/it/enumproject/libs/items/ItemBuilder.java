@@ -18,12 +18,12 @@ public class ItemBuilder implements Supplier<ItemStack> {
         return new ItemBuilder();
     }
 
-    public ItemBuilder setAmount(int amount) {
+    public ItemBuilder amount(int amount) {
         itemStack.setAmount(amount);
         return this;
     }
 
-    public ItemBuilder setName(String name) {
+    public ItemBuilder name(String name) {
         ItemMeta itemMeta = itemStack.getItemMeta();
         itemMeta.setDisplayName(ChatUtils.color(name));
 
@@ -31,12 +31,12 @@ public class ItemBuilder implements Supplier<ItemStack> {
         return this;
     }
 
-    public ItemBuilder setLore(String... lore) {
-        setLore(Arrays.asList(lore));
+    public ItemBuilder lore(String... lore) {
+        lore(Arrays.asList(lore));
         return this;
     }
 
-    public ItemBuilder setLore(List<String> lore) {
+    public ItemBuilder lore(List<String> lore) {
         ItemMeta itemMeta = itemStack.getItemMeta();
         itemMeta.setLore(ChatUtils.color(lore));
 
