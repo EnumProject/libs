@@ -1,10 +1,8 @@
 package it.enumproject.plugin.command;
 
-import it.enumproject.libs.EnumPlugin;
 import it.enumproject.libs.commands.EnumCommand;
 import it.enumproject.plugin.Enum;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
 public class MainCommand extends EnumCommand {
 
