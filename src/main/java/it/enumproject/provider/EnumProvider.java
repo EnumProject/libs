@@ -1,8 +1,14 @@
 package it.enumproject.provider;
 
+import it.enumproject.plugin.Enum;
+import it.enumproject.plugin.command.MainCommand;
+
 public class EnumProvider {
 
-    public EnumProvider() {
+    private final Enum plugin;
+
+    public EnumProvider(Enum plugin) {
+        this.plugin = plugin;
         init();
     }
 
@@ -12,7 +18,7 @@ public class EnumProvider {
     }
 
     private void getCommands() {
-
+        new MainCommand(plugin);
     }
 
     private void getListeners() {

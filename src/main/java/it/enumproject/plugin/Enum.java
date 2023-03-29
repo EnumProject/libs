@@ -1,9 +1,9 @@
 package it.enumproject.plugin;
 
+import it.enumproject.libs.EnumPlugin;
 import it.enumproject.provider.EnumProvider;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class Enum extends JavaPlugin {
+public class Enum extends EnumPlugin {
 
     private static Enum instance;
     private EnumProvider provider;
@@ -12,7 +12,7 @@ public class Enum extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         instance = this;
-        provider = new EnumProvider();
+        provider = new EnumProvider(this);
     }
 
     @Override
