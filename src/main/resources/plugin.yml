@@ -1,6 +1,6 @@
 name: EnumLibs
 version: '${version}'
-main: it.enumproject.plugin.EnumPlugin
+main: it.enumproject.plugin.Enum
 author: Axiid
 commands:
   enumlibs:
