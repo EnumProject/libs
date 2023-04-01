@@ -1,12 +1,8 @@
 package it.enumproject.plugin.command;
 
 import it.enumproject.libs.commands.EnumCommand;
-import it.enumproject.libs.components.ComponentBuilder;
 import it.enumproject.plugin.Enum;
-import net.md_5.bungee.api.chat.ClickEvent;
-import net.md_5.bungee.api.chat.HoverEvent;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
 public class MainCommand extends EnumCommand {
 
