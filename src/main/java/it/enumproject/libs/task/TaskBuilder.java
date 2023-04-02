@@ -28,12 +28,12 @@ public class TaskBuilder {
     }
 
     public TaskBuilder delay(int delay) {
-        this.delay = delay;
+        this.delay = delay * 20;
         return this;
     }
 
     public TaskBuilder delay(int delay, int period) {
-        this.delay = delay;
+        this.delay = delay * 20;
         this.period = period;
         return this;
     }
