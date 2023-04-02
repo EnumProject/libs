@@ -28,6 +28,7 @@ public class MainCommand extends EnumCommand {
                     .hoverMessage("&7Clicca per aprire!")
                     .send((Player) sender);
         }
+
     }
 
     @Override
