@@ -1,28 +1,20 @@
 package it.enumproject.provider;
 
+import it.enumproject.libs.provider.ProviderService;
 import it.enumproject.plugin.Enum;
 import it.enumproject.plugin.command.MainCommand;
 
-public class EnumProvider {
+public class EnumProvider extends ProviderService {
 
-    private final Enum plugin;
+    private final Enum plugin = Enum.getInstance();
 
-    public EnumProvider(Enum plugin) {
-        this.plugin = plugin;
-        init();
-    }
-
-    private void init() {
-        getCommands();
-        getListeners();
-    }
-
-    private void getCommands() {
+    @Override
+    public void getCommands() {
         new MainCommand(plugin);
     }
 
-    private void getListeners() {
+    @Override
+    public void getListeners() {
 
     }
-
 }
