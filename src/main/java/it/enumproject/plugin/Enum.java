@@ -1,6 +1,7 @@
 package it.enumproject.plugin;
 
 import it.enumproject.libs.EnumPlugin;
+import it.enumproject.provider.EnumProvider;
 
 public class Enum extends EnumPlugin {
 
@@ -10,6 +11,7 @@ public class Enum extends EnumPlugin {
     public void onEnable() {
         // Plugin startup logic
         instance = this;
+        setProviderService(new EnumProvider());
     }
 
     @Override

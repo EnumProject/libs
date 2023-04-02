@@ -6,7 +6,7 @@ public abstract class ProviderService {
         init();
     }
 
-    private void init() {
+    public void init() {
         getCommands();
         getListeners();
     }

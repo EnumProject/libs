@@ -14,7 +14,7 @@ import java.nio.file.Files;
 
 public class FileUtils {
 
-    private static EnumPlugin instance;
+    /*private static EnumPlugin instance;
 
     public FileUtils(EnumPlugin instance) {
         FileUtils.instance = instance;
@@ -58,6 +58,6 @@ public class FileUtils {
 
     public static File get(String fileName) {
         return new File(instance.getDataFolder(), fileName + ".yml");
-    }
+    }*/
 
 }
