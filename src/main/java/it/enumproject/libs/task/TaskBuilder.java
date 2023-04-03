@@ -28,12 +28,12 @@ public class TaskBuilder {
     }
 
     public TaskBuilder delay(int delay) {
-        this.delay = delay * 20;
+        this.delay = delay;
         return this;
     }
 
     public TaskBuilder delay(int delay, int period) {
-        this.delay = delay * 20;
+        this.delay = delay;
         this.period = period;
         return this;
     }
@@ -45,38 +45,22 @@ public class TaskBuilder {
 
     public void start() {
         if (type.equals(TaskType.LATER)) {
-            if(async) {
-                if(delay < 0) {
-                    Bukkit.getScheduler().runTaskLaterAsynchronously(plugin, runnable, delay);
-                } else {
-                    Bukkit.getScheduler().runTaskAsynchronously(plugin, runnable);
-                }
-                return;
-            }
-            if(delay < 0) {
-                Bukkit.getScheduler().runTaskLater(plugin, runnable, delay);
+            if (async) {
+                Bukkit.getScheduler().runTaskLaterAsynchronously(plugin, runnable, delay * 20L);
             } else {
-                Bukkit.getScheduler().runTask(plugin, runnable);
+                Bukkit.getScheduler().runTaskLater(plugin, runnable, delay * 20L);
             }
             reset();
             return;
         }
         if (type.equals(TaskType.TIMER)) {
-            if(async) {
-                if(delay < 0) {
-                    Bukkit.getScheduler().runTaskTimerAsynchronously(plugin, runnable, delay, period);
-                } else {
-                    Bukkit.getScheduler().runTaskAsynchronously(plugin, runnable);
-                }
-                return;
-            }
-            if(delay < 0) {
-                Bukkit.getScheduler().runTaskTimer(plugin, runnable, delay, period);
+            if (async) {
+                Bukkit.getScheduler().runTaskTimerAsynchronously(plugin, runnable, delay * 20L, period * 20L);
             } else {
-                Bukkit.getScheduler().runTask(plugin, runnable);
+                Bukkit.getScheduler().runTaskTimer(plugin, runnable, delay * 20L, period * 20L);
             }
-            reset();
         }
+        reset();
     }
 
     public void reset() {
