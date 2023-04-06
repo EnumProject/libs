@@ -16,7 +16,6 @@ public class EnumProvider extends ProviderService {
 
     @Override
     public void getListeners() {
-        new PlayerListener(plugin);
     }
 
 }
