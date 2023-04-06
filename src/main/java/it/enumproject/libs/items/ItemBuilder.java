@@ -32,10 +32,7 @@ public class ItemBuilder implements Supplier<ItemStack> {
     }
 
     public ItemBuilder lore(String... lines) {
-        for(String line : lines) {
-            ChatUtils.color(line);
-        }
-        itemMeta.setLore(Arrays.asList(lines));
+        itemMeta.setLore(ChatUtils.color(Arrays.asList(lines)));
         return this;
     }
 

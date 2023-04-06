@@ -12,7 +12,8 @@ public abstract class EnumListener implements Listener {
     public EnumListener(EnumPlugin plugin) {
         this.plugin = plugin;
 
-        plugin.getServer().getPluginManager().registerEvents(this, plugin);
+        if(plugin != null)
+            plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
 
     protected void sendMessage(CommandSender sender, String message) {
