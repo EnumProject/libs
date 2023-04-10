@@ -16,7 +16,6 @@ public abstract class ProviderService {
 
     public abstract void getListeners();
 
-    public void getTasks() {
-    }
+    public abstract void getTasks();
 
 }
