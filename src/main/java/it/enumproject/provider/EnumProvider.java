@@ -15,6 +15,17 @@ public class EnumProvider extends ProviderService {
 
     @Override
     public void getListeners() {
+
+    }
+
+    @Override
+    public void getTasks() {
+
+    }
+
+    @Override
+    public void getHooks() {
+
     }
 
 }

@@ -13,9 +13,8 @@ public abstract class ProviderService {
     }
 
     public abstract void getCommands();
-
     public abstract void getListeners();
-
     public abstract void getTasks();
+    public abstract void getHooks();
 
 }
