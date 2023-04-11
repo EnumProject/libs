@@ -15,7 +15,6 @@ public class TaskBuilder {
 
     public TaskBuilder(EnumPlugin plugin) {
         this.plugin = plugin;
-        reset();
     }
 
     public TaskBuilder async() {
