@@ -1,4 +1,4 @@
-package it.enumproject.libs.provider;
+package it.enumproject.libs.services;
 
 public abstract class ProviderService {
 

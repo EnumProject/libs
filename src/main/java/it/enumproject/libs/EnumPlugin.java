@@ -1,6 +1,6 @@
 package it.enumproject.libs;
 
-import it.enumproject.libs.provider.ProviderService;
+import it.enumproject.libs.services.ProviderService;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public abstract class EnumPlugin extends JavaPlugin {

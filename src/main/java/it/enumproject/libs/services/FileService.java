@@ -1,4 +1,4 @@
-package it.enumproject.libs.provider;
+package it.enumproject.libs.services;
 
 import it.enumproject.libs.EnumPlugin;
 import org.bukkit.configuration.file.FileConfiguration;
