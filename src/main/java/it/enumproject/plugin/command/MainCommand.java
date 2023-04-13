@@ -19,7 +19,7 @@ public class MainCommand extends EnumCommand {
     @Override
     public void execute(CommandSender sender, String[] args) {
         sendMessage(sender, "&7Running &bEnumLibs &7version &3" + plugin.getDescription().getVersion());
-        sendMessage(sender, "&7Created by &aAxiid");
+        sendMessage(sender, "&7Created by &3Enum Project");
 
         if(sender instanceof Player) {
             sendMessage(sender, "");
