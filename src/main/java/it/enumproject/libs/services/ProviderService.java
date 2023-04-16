@@ -2,10 +2,6 @@ package it.enumproject.libs.services;
 
 public abstract class ProviderService {
 
-    public ProviderService() {
-        init();
-    }
-
     public void init() {
         getCommands();
         getListeners();
