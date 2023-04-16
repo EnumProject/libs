@@ -10,24 +10,14 @@ import java.io.IOException;
 
 public class FileService {
 
-    private final EnumPlugin instance;
-
     private final File file;
     private FileConfiguration fileConfiguration;
 
 
     public FileService(EnumPlugin instance, String fileName) {
-        this.instance = instance;
-        if(!instance.getDataFolder().exists())
-            instance.getDataFolder().mkdir();
-
-        this.file = new File(instance.getDataFolder() + "/" + fileName);
-        if(!file.exists()) {
-            try {
-                file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        this.file = new File(instance.getDataFolder() +  "/" + fileName);
+        if(!this.file.exists()) {
+            instance.saveResource(fileName, false);
         }
         this.fileConfiguration = YamlConfiguration.loadConfiguration(file);
     }
