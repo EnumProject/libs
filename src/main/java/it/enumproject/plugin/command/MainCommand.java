@@ -2,16 +2,16 @@ package it.enumproject.plugin.command;
 
 import it.enumproject.libs.commands.EnumCommand;
 import it.enumproject.libs.components.ComponentBuilder;
-import it.enumproject.plugin.Enum;
+import it.enumproject.plugin.EnumLibs;
 import net.md_5.bungee.api.chat.ClickEvent;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class MainCommand extends EnumCommand {
 
-    private final Enum plugin;
+    private final EnumLibs plugin;
 
-    public MainCommand(Enum plugin) {
+    public MainCommand(EnumLibs plugin) {
         super("enumlibs", "", false, plugin);
         this.plugin = plugin;
     }

@@ -16,6 +16,11 @@ public abstract class EnumListener implements Listener {
             plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
 
+    /**
+     * Permette di inviare un messaggio a un giocatore con chat color inclusa
+     * @param sender - Il giocatore a cui viene inviato il messaggio
+     * @param message - Il messaggio che verrà inviato al giocatore speicficato
+     */
     protected void sendMessage(CommandSender sender, String message) {
         sender.sendMessage(ChatUtils.color(message));
     }
