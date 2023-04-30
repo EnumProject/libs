@@ -3,6 +3,7 @@ package it.enumproject.libs.utils;
 import org.bukkit.ChatColor;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ChatUtils {
 
@@ -21,10 +22,7 @@ public class ChatUtils {
      * @return Ritorna una lista di stringhe colorata e formattate
      */
     public static List<String> color(List<String> lines) {
-        for(String line : lines) {
-            color(line);
-        }
-        return lines;
+        return lines.stream().map(ChatUtils::color).collect(Collectors.toList());
     }
 
 }
