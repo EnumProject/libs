@@ -1,5 +1,6 @@
 package it.enumproject.libs.logger;
 
+import it.enumproject.libs.utils.ChatUtils;
 import org.bukkit.Bukkit;
 
 public class Logger {
@@ -10,7 +11,7 @@ public class Logger {
      * @param message Il messaggio che viene mandato
      */
     public static void log(LogType type, String message) {
-        Bukkit.getConsoleSender().sendMessage(type.getPrefix() + " " + message);
+        Bukkit.getLogger().info(ChatUtils.color(type.getPrefix() + " " + message));
     }
 
     /**

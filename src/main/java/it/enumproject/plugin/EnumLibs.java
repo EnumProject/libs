@@ -4,6 +4,7 @@ import it.enumproject.libs.EnumPlugin;
 import it.enumproject.libs.logger.LogType;
 import it.enumproject.libs.logger.Logger;
 import it.enumproject.provider.EnumProvider;
+import org.bukkit.Bukkit;
 
 public class EnumLibs extends EnumPlugin {
 
@@ -24,8 +25,6 @@ public class EnumLibs extends EnumPlugin {
     private void initialize() {
         instance = this;
         setProviderService(new EnumProvider());
-
-
 
         Logger.log(LogType.SUCCESS, "EnumLibs now is loaded.");
         Logger.log(LogType.SUCCESS, "Created by Enum Project (http://discord.enum-project.it)");
