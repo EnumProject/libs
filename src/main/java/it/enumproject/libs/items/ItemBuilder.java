@@ -1,5 +1,7 @@
 package it.enumproject.libs.items;
 
+import it.enumproject.libs.logger.LogType;
+import it.enumproject.libs.logger.Logger;
 import it.enumproject.libs.utils.ChatUtils;
 import org.bukkit.Color;
 import org.bukkit.Material;
@@ -8,12 +10,12 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Supplier;
 
 public class ItemBuilder implements Supplier<ItemStack> {
-
     private static ItemStack itemStack;
     private static ItemMeta itemMeta;
 
@@ -85,6 +87,21 @@ public class ItemBuilder implements Supplier<ItemStack> {
         name(section.getString("name"));
         lore(section.getStringList("lore"));
         return this;
+    }
+
+    /**
+     * Aggiunge la possiblità d'impostare un custom model data per le texture pack
+     * ATTENZIONE: Questo metodo non è supportato da versione inferiori alla 1.18
+     * @param data è l'id del modello target nella texture pack
+     * */
+    public ItemBuilder setCustomModelData(int data) {
+        try {
+            itemMeta.getClass().getMethod("setCustomModelData", Integer.class).invoke(data, data);
+            return this;
+        } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+            Logger.log(LogType.ERROR, "Errore nel processo di settaggio del custom model data per un item: " + itemStack.toString());
+            return this;
+        }
     }
 
     /**

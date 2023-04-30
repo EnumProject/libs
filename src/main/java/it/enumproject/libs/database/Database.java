@@ -3,7 +3,6 @@ package it.enumproject.libs.database;
 import java.sql.Connection;
 
 public interface Database {
-
     /*
     Qui ci sarà l'url che andrà utilizzato per connettere il
     tutto nel database attraverso il metodo Database#connect
@@ -21,5 +20,4 @@ public interface Database {
     creata nel momento che l'interfaccia viene implementata.
      */
     Connection getConnection();
-
 }
