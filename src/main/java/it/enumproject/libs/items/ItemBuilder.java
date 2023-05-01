@@ -23,7 +23,7 @@ public class ItemBuilder implements Supplier<ItemStack> {
     public static ItemStack EMPTY_STACK = new ItemStack(Material.AIR);
 
     /**
-     *
+     * Permette di creare un nuovo item.
      * @param material Il materiale che verrà utilizzato quando si andrà a creare l'item.
      */
     public static ItemBuilder create(Material material) {
@@ -33,7 +33,7 @@ public class ItemBuilder implements Supplier<ItemStack> {
     }
 
     /**
-     *
+     * Permette di assegnare un nome all'item.
      * @param name Il nome che assumerà l'item. (ChatColor inclusa)
      */
     public ItemBuilder name(String name) {
@@ -42,7 +42,7 @@ public class ItemBuilder implements Supplier<ItemStack> {
     }
 
     /**
-     *
+     * Imposta il numero degli item che verranno dati.
      * @param amount Il numero degli item che verranno mostrati e/o givvati.
      */
     public ItemBuilder amount(int amount) {
@@ -51,7 +51,7 @@ public class ItemBuilder implements Supplier<ItemStack> {
     }
 
     /**
-     *
+     * Permette di impostare una lore.
      * @param lines Le linee che verranno utilizzate per impostare la lore.
      */
     public ItemBuilder lore(String... lines) {
@@ -60,7 +60,7 @@ public class ItemBuilder implements Supplier<ItemStack> {
     }
 
     /**
-     *
+     * Permette di impostare una lore.
      * @param lines Le linee che verranno utilizzate per impostare la lore.
      */
     public ItemBuilder lore(List<String> lines) {
@@ -69,7 +69,7 @@ public class ItemBuilder implements Supplier<ItemStack> {
     }
 
     /**
-     *
+     * Permette di assegnare un colore ad un armatura in leather.
      * @param color Il colore che verrà dato all'armatura in leather.
      */
     public ItemBuilder color(Color color) {
@@ -79,7 +79,7 @@ public class ItemBuilder implements Supplier<ItemStack> {
     }
 
     /**
-     *
+     * Permette di prendere da una sezione di una configurazione l'item.
      * @param section La sezione da cui il metodo riprenderà tutte le informazioni per creare l'item.
      */
     public ItemBuilder inherit(ConfigurationSection section) {
@@ -94,7 +94,7 @@ public class ItemBuilder implements Supplier<ItemStack> {
      * ATTENZIONE: Questo metodo non è supportato da versione inferiori alla 1.18
      * @param data è l'id del modello target nella texture pack
      * */
-    public ItemBuilder setCustomModelData(int data) {
+    public ItemBuilder customModelData(int data) {
         try {
             itemMeta.getClass().getMethod("setCustomModelData", Integer.class).invoke(data, data);
             return this;
