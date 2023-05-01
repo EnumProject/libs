@@ -8,7 +8,7 @@ public class UpdateChecker {
 
     public static boolean needsUpdate() {
         String url = "https://api.github.com/repos/EnumProject/libs/releases/latest";
-        String pluginVersion = EnumLibs.getInstance().getDescription().getVersion();
+        String pluginVersion = EnumLibs.getJavaPlugin().getDescription().getVersion();
         String latestVersion = "";
 
         return !pluginVersion.equals(latestVersion);
