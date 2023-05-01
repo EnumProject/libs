@@ -1,12 +1,13 @@
 package it.enumproject.provider;
 
+import it.enumproject.libs.EnumPlugin;
 import it.enumproject.libs.services.ProviderService;
 import it.enumproject.plugin.EnumLibs;
 import it.enumproject.plugin.command.MainCommand;
 
 public class EnumProvider extends ProviderService {
 
-    private final EnumLibs plugin = EnumLibs.getInstance();
+    private final EnumPlugin plugin = EnumLibs.getJavaPlugin();
 
     @Override
     public void getCommands() {

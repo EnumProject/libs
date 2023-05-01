@@ -8,7 +8,9 @@ import org.bukkit.Bukkit;
 
 public class EnumLibs extends EnumPlugin {
 
-    private static EnumLibs instance;
+    public EnumLibs(EnumPlugin javaPlugin) {
+        super(javaPlugin);
+    }
 
     @Override
     public void onEnable() {
@@ -19,19 +21,13 @@ public class EnumLibs extends EnumPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        instance = null;
     }
 
     private void initialize() {
-        instance = this;
         setProviderService(new EnumProvider());
 
         Logger.log(LogType.SUCCESS, "EnumLibs now is loaded.");
         Logger.log(LogType.SUCCESS, "Created by Enum Project (http://discord.enum-project.it)");
-    }
-
-    public static EnumLibs getInstance() {
-        return instance;
     }
 
 }

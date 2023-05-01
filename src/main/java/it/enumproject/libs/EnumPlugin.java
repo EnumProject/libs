@@ -6,6 +6,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public abstract class EnumPlugin extends JavaPlugin {
 
+    private static EnumPlugin javaPlugin;
+
+    public EnumPlugin(EnumPlugin javaPlugin) {
+        EnumPlugin.javaPlugin = javaPlugin;
+    }
+
     /**
      * Imposta il provider da cui va a prendere le informazioni.
      * @param providerService Il provider da cui va a prendere le informazioni
@@ -20,6 +26,10 @@ public abstract class EnumPlugin extends JavaPlugin {
      */
     public void connectDatabase(Database database) {
         database.connect();
+    }
+
+    public static EnumPlugin getJavaPlugin() {
+        return javaPlugin;
     }
 
 }
