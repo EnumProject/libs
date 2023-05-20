@@ -8,6 +8,7 @@ import java.util.Optional;
  * Istanza del {@link Player} usata da enum libs
  * */
 public interface EnumPlayer {
+
     /**
      * @return l'istanza del {@link Player} di bukkit, l'optional sarà vuoto se il giocatore non è online
      * */

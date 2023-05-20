@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import java.util.Optional;
 
 public class EnumPlayerLoader implements EnumPlayer {
+
     private final String playerName;
 
     public EnumPlayerLoader(final String playerName) {
