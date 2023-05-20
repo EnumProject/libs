@@ -54,8 +54,8 @@ public class FileService {
         return this;
     }
 
-    /*
-     * Permette di salvare il file
+    /**
+     * Permette di salvare un file
      */
     public void save() {
         try {
@@ -63,6 +63,20 @@ public class FileService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * @return La configurazione
+     */
+    public FileConfiguration getFileConfiguration() {
+        return fileConfiguration;
+    }
+
+    /**
+     * @return Il file a cui si eseguono le azioni
+     */
+    public File getFile() {
+        return file;
     }
 
 }
